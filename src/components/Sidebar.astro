@@ -73,7 +73,8 @@ const { selectedItem } = Astro.props;
         />
         <div>DevOps</div>
       </a>
-      <a
+      <!-- disabling person projects as there are no active ones -->
+      <!-- <a
         href="/personal-projects"
         class={`nav-link-container w-inline-block ${
           selectedItem === "personal-projects" ? "w--current" : ""
@@ -86,7 +87,7 @@ const { selectedItem } = Astro.props;
           class="nav-link-image"
         />
         <div>Personal projects</div>
-      </a>
+      </a> -->
     </nav>
 
     <div
