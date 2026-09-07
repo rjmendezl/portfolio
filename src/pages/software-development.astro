@@ -6,32 +6,91 @@ import "../styles/styles.css";
 
 const projects = [
   {
-    title: "CodeCraft",
+    title:
+      "Data Recording System for Basílica Nuestra Señora de Guadalupe, La Ceiba Church",
     desc: [
-      "Developed a large-scale e-commerce platform for indie game developers",
-      "Designed and implemented UI, backend, and database architecture",
-      "Contributed to RESTful API and GraphQL design",
-      "Led a team of three engineers for several months",
+      "Developed a full-stack information management system to centralize and manage parish records through a secure web application",
+      "Designed and implemented features for data management, search, visualization, and user authentication",
+      "Containerized the application with Docker to simplify deployment and maintenance",
     ],
-    tech: ["React", "Next.js", "Node.js", "MongoDB", "Heroku"],
+    tech: ["Go", "PocketBase", "Next.js", "Docker"],
   },
   {
-    title: "CloudMason",
+    title: "Articles Web App",
     desc: [
-      "Contributed to microservices architecture design for email distribution system",
-      "Created a backend infrastructure with queues and an event bus",
-      "Designed to handle a high volume ~3 million emails per day",
+      "Joined a team of interns guided by professional developers to build a full featured PHP-Laravel web app from scratch",
+      "Implemented backend features, APIs, and database functionality",
+      "Implemented UI with responsive design",
     ],
-    tech: ["Node.js", "RabbitMQ", "Docker", "Kubernetes"],
+    tech: ["PHP Laravel", "Vue.js", "PostgreSQL", "Jenkins", "Docker"],
+  },
+];
+
+const mdm_projects = [
+  {
+    title: "MDM API",
+    desc: [
+      "Developed backend services in Go for the core MDM platform",
+      "Designed and implemented REST APIs for managing people, organizations, addresses, specialties, and other master data entities",
+      "Built event-driven processing pipelines using NATS JetStream and Kafka",
+      "Optimized ClickHouse queries and Elasticsearch indexing to improve search performance and data retrieval",
+      "Implemented automated testing, debugging, and performance improvements for high-volume data processing",
+    ],
+    tech: [
+      "Go",
+      "Clickhouse",
+      "PostgreSQL",
+      "Redis",
+      "ElasticSearch",
+      "Kafka",
+      "NATS",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+    ],
   },
   {
-    title: "Sarah (HealthEase.io)",
+    title: "MDM Admin",
     desc: [
-      "Contributed to Israel's largest telehealth platform for doctors and patients",
-      "Developed appointment and billing systems",
-      "Resolved live production bugs and server issues",
+      "Led the development of an administrative web application for managing the MDM platform",
+      "Designed and implemented features for data management, validation, and operational workflows",
+      "Integrated the admin panel with backend APIs and authentication services",
     ],
-    tech: ["React", "Node.js", "Express.js", "MySQL", "AWS"],
+    tech: [
+      "PHP Laravel",
+      "Filament",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+    ],
+  },
+  {
+    title: "ListMatch",
+    desc: [
+      "Developed features for a distributed entity resolution service that matches incoming records against master data using fuzzy search",
+      "Enhanced worker pipelines responsible for ingesting, searching, deduplicating, and exporting matched records",
+      "Improved Elasticsearch-based matching logic and optimized distributed processing workflows",
+    ],
+    tech: [
+      "Go",
+      "ElasticSearch",
+      "PostgreSQL",
+      "NATS",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+    ],
+  },
+  {
+    title: "Kosmos",
+    desc: [
+      "Contributed to a MDM integration platform responsible for synchronizing data from external systems",
+      "Developed import/export workflows and source adapters for integrating third-party data into the MDM ecosystem",
+      "Worked on background workers, APIs, and messaging infrastructure supporting large-scale data synchronization",
+    ],
+    tech: ["Go", "PostgreSQL", "NATS", "Docker", "Kubernetes"],
   },
 ];
 ---
@@ -61,6 +120,28 @@ const projects = [
               <div class="resouce-items">
                 {
                   projects.map((project) => (
+                    <Project
+                      title={project.title}
+                      desc={project.desc}
+                      tech={project.tech}
+                    />
+                  ))
+                }
+              </div>
+            </section>
+          </div>
+          <div class="content-container">
+            <h3>Master Data Management</h3>
+            <p>
+              Worked on multiple services within Internet Brands' Master Data
+              Management (MDM) platform, building data integration, entity
+              resolution, and administration tools used to consolidate and
+              manage millions of records across multiple data sources:
+            </p>
+            <section class="items-container">
+              <div class="resouce-items">
+                {
+                  mdm_projects.map((project) => (
                     <Project
                       title={project.title}
                       desc={project.desc}
