@@ -5,15 +5,25 @@ export function setupNav() {
   if (!navButton || !navMenu) return;
 
   const toggleNav = () => {
-    const isOpen = navMenu.classList.contains('is-open');
+    const isOpen = navMenu.classList.contains("is-open");
 
-    navMenu.classList.toggle('is-visible', !isOpen);
-    setTimeout(
-      () => {
-        navMenu.classList.toggle('is-open', !isOpen);
-      },
-      isOpen ? 300 : 10
-    );
+    if (isOpen) {
+      // Start closing animation
+      navMenu.classList.remove("is-open");
+
+      // Hide the menu after the animation finishes
+      setTimeout(() => {
+        navMenu.classList.remove("is-visible");
+      }, 250);
+    } else {
+      // Make the menu visible first
+      navMenu.classList.add("is-visible");
+
+      // Start opening animation
+      setTimeout(() => {
+        navMenu.classList.add("is-open");
+      }, 10);
+    }
   };
 
   navButton.addEventListener('click', toggleNav);
