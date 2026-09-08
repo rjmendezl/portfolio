@@ -748,3 +748,8 @@ p {
 .submit-btn:active {
     transform: scale(0.98);
 }
+
+.links-container {
+    display: flex;
+    gap: 15px;
+}
