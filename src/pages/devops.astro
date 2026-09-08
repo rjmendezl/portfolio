@@ -1,0 +1,66 @@
+---
+import Header from "../components/Header.astro";
+import Project from "../components/Project.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/styles.css";
+
+const projects = [
+  {
+    title: "Master Data Management",
+    desc: [
+      "Built and worked with Docker images and Docker Compose environments, and learned how application dependencies and configuration are packaged for deployment.",
+      "Troubleshot applications running in Kubernetes by investigating pod logs, resource usage, configuration, and runtime issues.",
+      "Set up the ListMatch CI/CD pipeline in Jenkins integrated with GitLab, including automated testing, linting, code coverage, and Docker image builds.",
+      "Deployed containerized applications through Internet Brands' Ship-It platform and investigated deployment/runtime issues",
+      "Comfortable working with Linux environments, command-line tools, processes, logs, permissions, and basic system troubleshooting",
+      "Investigated issues across applications, containers, databases, messaging systems, and Kubernetes environments",
+    ],
+    tech: ["Docker", "Kubernetes", "Jenkins", "GitLab CI/CD", "Linux"],
+  },
+];
+---
+
+<!doctype html>
+<html>
+  <Header title="DevOps | Ricardo Méndez" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="devops" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/" class="back-nav-button w-inline-block"
+              ><img
+                src="/assets/back.svg"
+                loading="lazy"
+                alt=""
+                class="back-nav-img"
+              />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>DevOps</h1>
+            <section class="items-container">
+              <div class="resouce-items">
+                {
+                  projects.map((project) => (
+                    <Project
+                      title={project.title}
+                      desc={project.desc}
+                      tech={project.tech}
+                    />
+                  ))
+                }
+              </div>
+            </section>
+          </div>
+        </div>
+        <Footer />
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>

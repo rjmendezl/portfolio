@@ -1,0 +1,174 @@
+---
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/styles.css";
+---
+
+<!doctype html>
+<html>
+  <Header title="Ricardo Méndez" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="home" />
+      <nav class="main">
+        <div class="container">
+          <main class="fold-content-container">
+            <div class="fold-content">
+              <h1>Hi, I'm Ricardo.<br />I build things for the web.</h1>
+              <p class="lead">
+                Software Engineer focused on backend development, distributed
+                systems, and cloud-native technologies. I have hands-on
+                experience building APIs, data-intensive applications, and
+                distributed systems using technologies like Go, Docker,
+                Kubernetes, CI/CD, and messaging systems. I enjoy solving
+                complex problems and building reliable, scalable software.
+              </p>
+            </div>
+            <p>Checkout my profiles</p>
+            <div class="links-container">
+              <div class="link-container">
+                <a href="https://linkedin.com/in/rjmendezl" target="_blank">
+                  <img
+                    src="assets/linkedin.png"
+                    alt="Visit my LinkedIn profile"
+                    width="32"
+                    height="32"
+                  />
+                </a>
+              </div>
+              <div class="link-container">
+                <a href="https://github.com/rjmendezl" target="_blank">
+                  <img
+                    src="assets/github.png"
+                    alt="Visit my GitHub profile"
+                    width="32"
+                    height="32"
+                  />
+                </a>
+              </div>
+            </div>
+          </main>
+          <div class="projects-section">
+            <h3>My skills</h3>
+            <!-- Software Development -->
+            <a href="/software-development" class="projects-container">
+              <div class="single-projects-category">
+                <div class="projects-category-image-container">
+                  <img
+                    src="./assets/browser.svg"
+                    loading="lazy"
+                    alt=""
+                    class="projects-category-image"
+                  />
+                </div>
+              </div>
+              <div class="single-projects-content">
+                <h4>Software Development</h4>
+                <div class="tech-tools-container">
+                  <div class="mini-label-white gray-color">
+                    Technologies &amp; tools
+                  </div>
+                  <div class="chips-container chips-container-small-width">
+                    <div class="single-chip small-chip">Golang</div>
+                    <div class="single-chip small-chip">PHP</div>
+                    <div class="single-chip small-chip">Laravel</div>
+                    <div class="single-chip small-chip">Java</div>
+                    <div class="single-chip small-chip">Spring Boot</div>
+                    <div class="single-chip small-chip">Git</div>
+                    <div class="single-chip small-chip">React.js</div>
+                    <div class="single-chip small-chip">Vue.js</div>
+                    <div class="single-chip small-chip">Node.js</div>
+                    <div class="single-chip small-chip">TypeScript</div>
+                    <div class="single-chip small-chip">Angular</div>
+                    <div class="single-chip small-chip">Postgres</div>
+                    <div class="single-chip small-chip">Clickhouse</div>
+                    <div class="single-chip small-chip">Redis</div>
+                    <div class="single-chip small-chip">NATS</div>
+                    <div class="single-chip small-chip">Kafka</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- DevOps & Cloud -->
+            <a href="/devops" class="projects-container">
+              <div class="single-projects-category">
+                <div class="projects-category-image-container devops-img">
+                  <img
+                    src="./assets/database.svg"
+                    loading="lazy"
+                    alt=""
+                    class="projects-category-image"
+                  />
+                </div>
+              </div>
+              <div class="single-projects-content">
+                <h4>DevOps &amp;&nbsp;Cloud</h4>
+                <div class="tech-tools-container">
+                  <div class="mini-label-white gray-color">
+                    Technologies &amp; tools
+                  </div>
+                  <div class="chips-container chips-container-small-width">
+                    <div class="single-chip small-chip">Docker</div>
+                    <div class="single-chip small-chip">Kubernetes</div>
+                    <div class="single-chip small-chip">GitLab CI/CD</div>
+                    <div class="single-chip small-chip">GitHub Actions</div>
+                    <div class="single-chip small-chip">Linux</div>
+                    <div class="single-chip small-chip">Bash</div>
+                    <div class="single-chip small-chip">Grafana</div>
+                    <div class="single-chip small-chip">Prometheus</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="contact-container">
+            <h3>Contact Me</h3>
+            <p>Do you wanna build something together? Let's get in touch!</p>
+
+            <form
+              class="contact-group"
+              action="https://formspree.io/f/mbgjzwkj"
+              method="POST"
+            >
+              <div class="form-group">
+                <label for="email">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="subject">
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="message">
+                  <textarea
+                    name="message"
+                    rows="6"
+                    placeholder="Message"
+                    required></textarea>
+                </label>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <h5 class="form-powered-by">This form is powered by Formspree.</h5>
+          </div>
+        </div>
+        <Footer />
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>
