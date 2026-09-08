@@ -674,7 +674,6 @@ p {
 .contact-container {
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
 .contact-container h2 {
@@ -747,6 +746,12 @@ p {
 
 .submit-btn:active {
     transform: scale(0.98);
+}
+
+.form-powered-by {
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
 }
 
 .links-container {
